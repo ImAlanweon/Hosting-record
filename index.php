@@ -7,7 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+  <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script>
@@ -24,9 +26,11 @@
 </head>
 <body>
 <?php include('header.php'); ?>
+<?php require('alertas.php'); alerta();?>
 <div class="container mt-5 ">
-    <h1>Registro de hospedaje</h1>
-    <form method="post" action="procesarRegistro.php">
+  <div class="p-4">
+  <h1>Registro de hospedaje</h1>
+    <form class="p-4" method="post" action="procesarRegistro.php">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -72,6 +76,10 @@
       
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
+
+
+  </div>
+   
     </div>
     
 
