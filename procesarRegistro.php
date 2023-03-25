@@ -20,7 +20,7 @@ $sentencia = $bd->prepare("INSERT INTO hospedaje(nombre,direccion,genero,edad,zo
 
     if ($resultado === TRUE) {
         // Redireccionar a index.php y pasar el mensaje de éxito en la URL
-        header('Location: index.php?mensaje=registrado&status=success');
+        header('Location: index.php?mensaje=su clave de registro es '.$claveRegistro .'&status=success');
         exit();
     } else {
         // Redireccionar a index.php y pasar el mensaje de error en la URL
